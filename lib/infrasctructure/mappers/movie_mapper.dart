@@ -1,4 +1,5 @@
 import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/infrasctructure/models/moviedb/movie_details.dart';
 import 'package:cinemapedia/infrasctructure/models/moviedb/movie_moviedb.dart';
 
 class MovieMapper {
@@ -16,6 +17,26 @@ class MovieMapper {
       posterPath: (moviedb.posterPath != '')
           ? 'https://image.tmdb.org/t/p/w500/${moviedb.posterPath}'
           : 'no-poster',
+      releaseDate: moviedb.releaseDate,
+      title: moviedb.title,
+      video: moviedb.video,
+      voteAverage: moviedb.voteAverage,
+      voteCount: moviedb.voteCount);
+
+  static Movie movieDetailsToEntity(MovieDetails moviedb) => Movie(
+      adult: moviedb.adult,
+      backdropPath: (moviedb.backdropPath != '')
+          ? 'https://image.tmdb.org/t/p/w500/${moviedb.backdropPath}'
+          : 'https://media.istockphoto.com/id/1207750534/photo/404-error-internet-page-not-found-hand-with-magnifier-concept-picture.webp?a=1&b=1&s=612x612&w=0&k=20&c=2_p_np0BpWxRKkqObsIMT5H4owbeYCnq7X_-3e22epg=',
+      genreIds: moviedb.genres.map((e) => e.name).toList(),
+      id: moviedb.id,
+      originalLanguage: moviedb.originalLanguage,
+      originalTitle: moviedb.originalTitle,
+      overview: moviedb.overview,
+      popularity: moviedb.popularity,
+      posterPath: (moviedb.posterPath != '')
+          ? 'https://image.tmdb.org/t/p/w500/${moviedb.posterPath}'
+          : 'https://media.istockphoto.com/id/1207750534/photo/404-error-internet-page-not-found-hand-with-magnifier-concept-picture.webp?a=1&b=1&s=612x612&w=0&k=20&c=2_p_np0BpWxRKkqObsIMT5H4owbeYCnq7X_-3e22epg=',
       releaseDate: moviedb.releaseDate,
       title: moviedb.title,
       video: moviedb.video,
