@@ -1,0 +1,2 @@
+C:/Users/SkyRob/Desktop/Flutter-SoreviR/cinemapedia/android/app/.cxx/Debug/4g484412/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/SkyRob/Desktop/Flutter-SoreviR/cinemapedia/android/app/.cxx/Debug/4g484412/armeabi-v7a/CMakeFiles/rebuild_cache.dir
